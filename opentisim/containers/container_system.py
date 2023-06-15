@@ -2228,6 +2228,8 @@ class System:
                    fancybox=True, shadow=True, ncol=5, fontsize=fontsize)
         fig.subplots_adjust(bottom=0.23)
 
+        return fig
+
     def land_use_plot(self, width=0.25, alpha=0.6, fontsize=20):
         """Gather data from Terminal and plot which elements come online when"""
 
@@ -2319,6 +2321,8 @@ class System:
                    fancybox=True, shadow=True, ncol=3, fontsize=fontsize)
         fig.subplots_adjust(bottom=0.18)
 
+        return fig
+
     def terminal_capacity_plot(self, width=0.25, alpha=0.6):
         """Gather data from Terminal and plot which elements come online when"""
 
@@ -2375,6 +2379,8 @@ class System:
         ax.set_xticklabels(years)
         ax.legend()
 
+        return fig
+
     def laden_stack_area_plot(self, width=0.25, alpha=0.6):
         """Gather data from laden stack area and plot it against demand"""
 
@@ -2427,7 +2433,9 @@ class System:
         ax1.legend()
         ax2.legend()
 
-    def opex_plot(self, cash_flows):
+        return fig
+
+    def terminal_land_use_plot(self, cash_flows):
         """Gather data from Terminal elements and combine into a cash flow plot"""
 
         # prepare years, revenue, capex and opex for plotting
@@ -2455,3 +2463,5 @@ class System:
         ax.set_xticks([x for x in years])
         ax.set_xticklabels(years)
         ax.legend()
+
+        return fig
